@@ -11,8 +11,6 @@
 		add_image_size('desktop', 568, 378, true);
 		add_image_size('tablet', 400, 266, true);
 		add_image_size('small-thumbs', 90, 60, true);
-		//add_image_size( 'category-thumb', 300, 9999 ); //300 pixels wide (and unlimited height)
-		//add_image_size( 'homepage-thumb', 220, 180, true ); //(cropped)
 	}
 	
 	add_filter( 'image_size_names_choose', 'custom_image_sizes_choose' );  
@@ -68,21 +66,6 @@
 
 		register_post_type('mrh_clients',$args);
 	}
-
-	/*
-	// returns the content of $GLOBALS['post']
-	// if the page is called 'debug'
-	function my_the_content_filter($content) {
-		// assuming you have created a page/post entitled 'debug'
-		if ($GLOBALS['post']->post_name == 'debug') {
-			return var_export($GLOBALS['post'], TRUE );
-		}
-		// otherwise returns the database content
-		return $content;
-	}
-
-	add_filter( 'the_content', 'my_the_content_filter' );
-	*/
 	
 	add_filter('the_content', 'mrh_process_image_tags', 20);
 
@@ -103,33 +86,15 @@
 		$images = $dom->getElementsByTagName('img');
 		foreach ($images as $image) {
 
-			/*$src = explode('.', $image->getAttribute('src'));
-			*/
-
+			// Filters out the file suffix
 			$src = explodeLast('.', $image->getAttribute('src'));
 
+			// Filters out the size info in filenames
 			$sizeless = explodeLast('-', $src[0]);
-
-			// Filter out the sizes from the filename
-			/*$sizeless_src = explode('-', $src[0]);
-
-			$i = 0;
-			$sizeless = '';
-			while ($i < count($sizeless_src) - 1) {
-				$sizeless .= $sizeless_src[$i] . '-';
-				$i++;
-			}*/
 				
 			$retina = $sizeless[0] . '1136x756.' . $src[1];
 			$desktop = $sizeless[0] . '568x378.' . $src[1];
 			$tablet = $sizeless[0] . '400x266.' . $src[1];
-
-			/*
-				add_image_size('retina', 1136, 756);
-				add_image_size('desktop', 568, 378);
-				add_image_size('tablet', 400, 266);
-				add_image_size('small-thumbs', 90, 60, true);
-			*/
 
 			// Replace the image
 			$image->setAttribute('data-retina', $retina);
@@ -146,31 +111,6 @@
 		$html = $dom->saveHTML();
 
 		return $html;
-
-		/*$dom = new DOMDocument();
-		$dom->loadHTML($html);
-		$xpath = new DOMXPath($dom);
-
-		$images = $xpath->query('descendant::img');
-
-		foreach ($images as $image) {
-			$new_image_parameters = array(
-				'src' => $image->getAttribute('src'),
-				'class' => $image->getAttribute('alt')
-			);
-			
-			// Create the new image
-			$new_image = $dom->createElement('img');
-			$new_src = $dom->createAttribute('src');
-			$new_src->value= $new_image_parameters['src'] . 'x2';
-			$new_image->appendChild($new_src);
-
-			$dom->replaceChild($new_image, $image);
-			
-
-			//return $new_image;
-		}*/
-
 	}
 
 	function explodeLast($delimiter, $string) {
@@ -187,15 +127,4 @@
 		return array($explodedPartOne, $explodedPartTwo);
 	}
 
-		/*
-		$dom = new DOMDocument();
-		$dom->loadHTML(get_the_content());
-		$xpath = new DOMXPath($dom);
-
-		// XPath expression to get the first link's href-attribute
-		// $link_href = $xpath->query('descendant::a/@href')->item(0)->nodeValue; // "Old" syntax
-		$link_href = $xpath->query('descendant::a[not(contains(@rel, "footnote"))]/@href')->item(0)->nodeValue;
-						
-		echo '<h1><a href="' . $link_href . '">' . $hka_the_title . '</a> <a href="' . get_permalink() . '" class="permalink">∞</a> </h1>';
-		*/
 ?>
