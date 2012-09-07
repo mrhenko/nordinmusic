@@ -15,7 +15,7 @@
 
 	<body>
 
-		<header id="logo" role="logo">
+		<header id="logo" role="banner">
 			<h1><a href="<?php bloginfo('url'); ?>">
 				<span>Nordin</span> Music Productions
 				<?php /*bloginfo('title');*/ ?>

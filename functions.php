@@ -108,9 +108,21 @@
 		}
 
 		// Get the new HTML string
-		$html = $dom->saveHTML();
+		$html = get_inner_html($dom->getElementsByTagName('body')->item(0));
+		
+		//$html = $dom->save();
 
 		return $html;
+	}
+
+	function get_inner_html( $node ) { 
+		$innerHTML= ''; 
+		$children = $node->childNodes; 
+		foreach ($children as $child) { 
+			$innerHTML .= $child->ownerDocument->saveXML( $child ); 
+		} 
+		
+		return $innerHTML;
 	}
 
 	function explodeLast($delimiter, $string) {
