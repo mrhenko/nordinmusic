@@ -103,21 +103,26 @@
 		$images = $dom->getElementsByTagName('img');
 		foreach ($images as $image) {
 
-			$src = explode('.', $image->getAttribute('src'));
+			/*$src = explode('.', $image->getAttribute('src'));
+			*/
+
+			$src = explodeLast('.', $image->getAttribute('src'));
+
+			$sizeless = explodeLast('-', $src[0]);
 
 			// Filter out the sizes from the filename
-			$sizeless_src = explode('-', $src[0]);
+			/*$sizeless_src = explode('-', $src[0]);
 
 			$i = 0;
 			$sizeless = '';
 			while ($i < count($sizeless_src) - 1) {
 				$sizeless .= $sizeless_src[$i] . '-';
 				$i++;
-			}
+			}*/
 				
-			$retina = $sizeless . '1136x756.' . $src[1];
-			$desktop = $sizeless . '568x378.' . $src[1];
-			$tablet = $sizeless . '400x266.' . $src[1];
+			$retina = $sizeless[0] . '1136x756.' . $src[1];
+			$desktop = $sizeless[0] . '568x378.' . $src[1];
+			$tablet = $sizeless[0] . '400x266.' . $src[1];
 
 			/*
 				add_image_size('retina', 1136, 756);
@@ -166,6 +171,20 @@
 			//return $new_image;
 		}*/
 
+	}
+
+	function explodeLast($delimiter, $string) {
+		$exploded = explode($delimiter, $string);
+
+		$i = 0;
+		$explodedPartOne = '';
+		while ($i < count($exploded) - 1) {
+			$explodedPartOne .= $exploded[$i] . $delimiter;
+			$i++;
+		}
+		$explodedPartTwo = $exploded[$i];
+
+		return array($explodedPartOne, $explodedPartTwo);
 	}
 
 		/*
