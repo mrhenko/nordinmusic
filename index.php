@@ -46,6 +46,7 @@
 
 		<script src="<?php bloginfo('template_directory') ?>/gallery_images.js">
 		</script>
+		<?php wp_footer(); ?>
 	</body>
 
 </html>
