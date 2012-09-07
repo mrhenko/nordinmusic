@@ -80,7 +80,7 @@
 	function mrh_process_image_tags($html) {
 		// Load the HTML
 		$dom = new DOMDocument();
-		$dom->loadHTML($html);
+		$dom->loadHTML('<?xml encoding="UTF-8">' . $html);
 
 		// Loop through all images
 		$images = $dom->getElementsByTagName('img');
@@ -102,8 +102,10 @@
 			$image->setAttribute('data-tablet', $tablet);
 
 			// Remove size attributes
-			$image->setAttribute('width', '');
-			$image->setAttribute('height', '');
+			$image->removeAttribute('width');
+			$image->removeAttribute('height');
+			//$image->setAttribute('width', '');
+			//$image->setAttribute('height', '');
 
 		}
 
