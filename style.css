@@ -97,8 +97,13 @@ ul li {
 header#logo {
 	/* Box model */
 	position: relative;
-	max-width: 24.29em;
+	//max-width: 24.29em;
 	margin: 0 0 106px 0;
+	width: 349px;
+	height: 311px;
+	background-image: url(pix/logo.png);
+	background-position: 0 10px;
+	background-repeat: no-repeat;
 }
 
 header#logo h1 a {
@@ -111,6 +116,9 @@ header#logo h1 a {
 
 	/* Colors and images */
 	color: #8a1e16;
+
+	/* Make invisible, but clickable */
+	opacity: 0;
 }
 
 header#logo h1 a span {
@@ -124,6 +132,9 @@ header#logo h1 a span {
 
 	/* Colors and images */
 	color: #000;
+
+	/* Make invisible, but clickable */
+	opacity: 0;
 }
 
 /**
