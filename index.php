@@ -35,7 +35,7 @@
 		<?php if ( have_posts() ) :?>
 			<?php while (have_posts() ) :?>
 				<?php the_post(); ?>
-				<article class="main-content">
+				<article <?php post_class('main-content'); ?>>
 					<?php
 						the_content();
 						//print_r(mrh_process_image_tags(get_the_content()));
