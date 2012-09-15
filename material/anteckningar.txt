@@ -1,0 +1,17 @@
+Nordin Music - Anteckningar
+=========================
+
+
+
+Bilder
+--------
+* Aspect: 1,5
+* Stor Bild: 568 x 378 px
+* Retina: 1136 x 756px
+* Halvstor?
+* Thumbnail: 90 x 60px + 3px border, lätt radius #982020
+
+
+Menu
+--------
+* 390 x 199px
