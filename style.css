@@ -85,7 +85,8 @@ body p {
 
 /* Padding */
 body p, body h2, body ul, body div.gallery {
-	margin: 0 1em;	
+	margin-left: 1em;
+	margin-right: 1em;
 }
 
 h2 {
@@ -192,21 +193,7 @@ div.gallery img {
 	border: 3px solid #982020;
 	border-radius: 3px;
 }
-/*
-div.gallery div.gallery-row {
-	-webkit-column-width: 96px;
-	-moz-column-width: 96px;
-	-o-column-width: 96px;
-	-ms-column-width: 96px;
-	column-width: 96px;
-	
-	-webkit-column-gap: 7px;
-	-moz-column-gap: 7px;
-	-o-column-gap: 7px;
-	-ms-column-gap: 7px;
-	column-gap: 7px;
-}
-*/
+
 dl.gallery-item {
 	float: left;	
 	margin: 0 1em;
@@ -391,7 +378,7 @@ div.gallery + h2, div.gallery + h2 + p, div.gallery + h2 + ul {
 	}
 
 	div.gallery-row {
-		max-width: 100%;	
+		max-width: 720px;	
 	}
 
 
@@ -432,6 +419,12 @@ div.gallery + h2, div.gallery + h2 + p, div.gallery + h2 + ul {
 
 	}
 
+	/* Padding */
+	body p, body h2, body ul {
+		margin-right: 0em;
+		margin-left: 0em;
+	}
+
 	header#logo {
 		margin: 0 0 106px 0;
 	}
@@ -459,6 +452,35 @@ div.gallery + h2, div.gallery + h2 + p, div.gallery + h2 + ul {
 	nav[role="navigation"] ul li:nth-of-type(3) {
 		/* Box model */
 		right: 0;
+	}
+
+	
+	/* Big image on gallery page */
+	img.gallery-big-image {
+		/* Box model */
+		position: absolute;
+		display: block;
+		right: 0;
+		top: 0;
+
+		width: 568px;
+		height: 378px;
+
+		margin-right: -69px;
+	}
+
+	body div.gallery {
+		/* Box model */
+		position: absolute;
+		right: -69px;
+		top: 380px;
+		padding: 0;
+		margin-right: -1em;
+		width: 372px;
+	}
+
+	dl.gallery-item {
+		margin: 0.5em 1em;	
 	}
 		
 }
