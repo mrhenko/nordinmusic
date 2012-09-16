@@ -74,7 +74,7 @@ body {
 }
 
 /* The body of the main page */
-article.post-6.main-content {
+body.main-page article.main-content {
 	/* Box model */
 	position: relative;
 	padding-left: 19.9em;
@@ -82,7 +82,7 @@ article.post-6.main-content {
 }
 
 /* The face */
-article.post-6.main-content:before {
+body.main-page article.main-content:before {
 	content: ' ';
 
 	/* Box model */
@@ -92,7 +92,6 @@ article.post-6.main-content:before {
 	height: 548px;
 	left: -203px;
 	top: -96px;
-	//left: 0;
 
 	/* Colors and images */
 	background-image: url('pix/face.png');
