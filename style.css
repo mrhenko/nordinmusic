@@ -212,6 +212,129 @@ img.gallery-big-image {
 
 
 /* Responsive */
+
+
+/* Medium screens */
+@media screen and (min-width: 720px) {
+	/* Change the layout so the logo and menu
+	 * lines up side by side
+	 * */
+	header#logo {
+		margin: 0 0 90px 0;
+		width: 40%;
+	}
+
+	/**
+	 * The nav menu
+	 * 
+	 * */
+	nav[role="navigation"] {
+		/* Box model */
+		position: absolute;
+		right: 60px;
+		top: 0;
+		//width: 390px;
+		
+		max-width: 390px;
+		width: 45%;
+		
+		height: 199px;
+
+		/* Colors and images */
+		background-image: url('pix/link-lines.png');
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+		background-size: 100%;
+	}
+
+	nav[role="navigation"] ul {
+		/* Box model */
+		position: absolute;
+		bottom: -20px;
+		width: 100%;
+	}
+
+	nav[role="navigation"] ul li {
+		/* Box model */
+		//padding-left: 30px;
+		width: 165px;
+
+		/* Typography */
+		list-style: none;
+		text-align: center;
+
+		/* Colors and images */
+		background-image: url('pix/tejp.png');
+		background-repeat: no-repeat;
+	}
+
+	nav[role="navigation"] ul li a {
+		/* Box model */
+		display: block;
+
+		opacity: 0;
+	}
+
+	/* First */
+	nav[role="navigation"] ul li:nth-of-type(1) {
+		/* Box model */
+		margin-left: -80px;
+
+		/* Colors and images */
+		background-position: -20px -10px;
+
+		/* Special */
+		-webkit-transform: rotate(1deg);
+		-moz-tranform: rotate(1deg);
+		-o-transform: rotate(1deg);
+		-ms-transform: rotate(1deg);
+		transform: rotate(1deg);
+	}
+
+	/* Place the second link in the middle */
+	nav[role="navigation"] ul li:nth-of-type(2) {
+		/* Box model */
+		display: block;
+		width: 168px;
+		position: relative;
+		margin: 0 auto;
+		text-align: center;	
+
+		/* Colors and images */
+		background-position: -20px -50px;
+
+		/* Special */
+		-webkit-transform: rotate(-5deg);
+		-moz-transform: rotate(-5deg);
+		-o-transform: rotate(-5deg);
+		-ms-transform: rotate(-5deg);
+		transform: rotate(-5deg);
+	}
+
+	/* The third */
+	nav[role="navigation"] ul li:nth-of-type(3) {
+		/* Box model */
+		position: absolute;
+		bottom: 4.42em;
+		right: -20px;
+		//width: 165px;
+
+		/* Colors and images */
+		background-position: -15px -100px;
+
+		/* Special */
+		-webkit-transform: rotate(8deg);
+		-moz-transform: rotate(8deg);
+		-o-transform: rotate(8deg);
+		-ms-transform: rotate(8deg);
+		transform: rotate(8deg);
+
+	}
+
+
+}
+
+/* "Full size" screens */
 @media screen and (min-width: 1024px) {
 	body {
 		-webkit-box-sizing: content-box;
@@ -220,7 +343,6 @@ img.gallery-big-image {
 		-ms-box-sizing: content-box;
 		box-sizing: content-box;	
 	}
-
 
 	/* The body of the main page */
 	body.main-page article.main-content {
@@ -251,103 +373,29 @@ img.gallery-big-image {
 		margin: 0 0 106px 0;
 	}
 
-	/**
- * The nav menu
- * 
- * */
-nav[role="navigation"] {
-	/* Box model */
-	position: absolute;
-	right: 100px;
-	top: 0;
-	width: 390px;
-	height: 199px;
+	nav[role="navigation"] {
+		/* Box model */
+		right: 100px;
 
-	/* Colors and images */
-	background-image: url('pix/link-lines.png');
-	background-repeat: no-repeat;
-	background-position: 50% 0;
-}
+		/* Colors and images */
+		background-size: auto;
+	}
 
-nav[role="navigation"] ul {
-	/* Box model */
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-}
+	nav[role="navigation"] ul {
+		/* Box model */
+		bottom: 0;
+	}
 
-nav[role="navigation"] ul li {
-	/* Box model */
-	//padding-left: 30px;
-	width: 165px;
+	/* First */
+	nav[role="navigation"] ul li:nth-of-type(1) {
+		/* Box model */
+		margin-left: -30px;
+	}
 
-	/* Typography */
-	list-style: none;
-	text-align: center;
-
-	/* Colors and images */
-	background-image: url('pix/tejp.png');
-	background-repeat: no-repeat;
-}
-
-nav[role="navigation"] ul li a {
-	/* Box model */
-	display: block;
-
-	opacity: 0;
-}
-
-/* First */
-nav[role="navigation"] ul li:nth-of-type(1) {
-	/* Colors and images */
-	background-position: -20px -10px;
-
-	/* Special */
-	-webkit-transform: rotate(1deg);
-	-moz-tranform: rotate(1deg);
-	-o-transform: rotate(1deg);
-	-ms-transform: rotate(1deg);
-	transform: rotate(1deg);
-}
-
-/* Place the second link in the middle */
-nav[role="navigation"] ul li:nth-of-type(2) {
-	/* Box model */
-	display: block;
-	width: 168px;
-	position: relative;
-	margin: 0 auto;
-	text-align: center;	
-
-	/* Colors and images */
-	background-position: -20px -50px;
-
-	/* Special */
-	-webkit-transform: rotate(-5deg);
-	-moz-transform: rotate(-5deg);
-	-o-transform: rotate(-5deg);
-	-ms-transform: rotate(-5deg);
-	transform: rotate(-5deg);
-}
-
-/* The third */
-nav[role="navigation"] ul li:nth-of-type(3) {
-	/* Box model */
-	position: absolute;
-	bottom: 4.42em;
-	right: 0;
-	//width: 165px;
-
-	/* Colors and images */
-	background-position: -15px -100px;
-
-	/* Special */
-	-webkit-transform: rotate(8deg);
-	-moz-transform: rotate(8deg);
-	-o-transform: rotate(8deg);
-	-ms-transform: rotate(8deg);
-	transform: rotate(8deg);
-
-}
-	
+	/* The third */
+	nav[role="navigation"] ul li:nth-of-type(3) {
+		/* Box model */
+		right: 0;
+	}
+		
 }
