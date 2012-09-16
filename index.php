@@ -13,7 +13,11 @@
 		<?php wp_head(); ?>
 	</head>
 
-	<body>
+	<body <?php
+		if (is_front_page()) {
+			echo ' class="main-page" ';	
+		}
+	?>>
 
 		<header id="logo" role="banner">
 			<h1><a href="<?php bloginfo('url'); ?>">
