@@ -54,7 +54,7 @@ body {
 	width: 100%; /* Default scale to full screen */
 	/*max-width: 820px; /* Based on the customers page. May differ. Subtract when adding paddings and margins */
 	max-width: 58.6em;
-	padding: 1em 2em;
+	padding: 1em 0em;
 	position: relative;
 	margin: 0 auto;
 	
@@ -81,6 +81,11 @@ body p {
 	/* Typography */
 	margin-bottom: 1em;
 	text-align: justify;
+}
+
+/* Padding */
+body p, body h2, body ul, body div.gallery {
+	margin: 0 1em;	
 }
 
 h2 {
@@ -110,13 +115,20 @@ header#logo {
 	//max-width: 24.29em;
 	max-width: 349px;
 	margin: 0 auto;
+	padding: 0 2em;
 	//width: 349px;
-	width: 100%;
-	height: 105px;
+	width: 90%;
+	height: 110px;
 	background-image: url(pix/logo.png);
 	background-position: 0 10px;
 	background-repeat: no-repeat;
 	background-size: 100%;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 header#logo h1 a {
@@ -137,7 +149,7 @@ header#logo h1 a {
 header#logo h1 a span {
 	/* Box model */
 	display: block;
-	margin-top: 0.5em;
+	margin-top: 0em;
 
 	/* Typography */
 	font-size: 2.25em;
@@ -169,9 +181,9 @@ article.main-content {
  * 
  * (Uses the "Cleaner Gallery" plugin for better formated output)
  * */
-div.gallery {
+body div.gallery {
 	/* Box model */
-	max-width: 307px;
+	//max-width: 307px;
 	margin-bottom: 34px;
 }
 
@@ -180,7 +192,7 @@ div.gallery img {
 	border: 3px solid #982020;
 	border-radius: 3px;
 }
-
+/*
 div.gallery div.gallery-row {
 	-webkit-column-width: 96px;
 	-moz-column-width: 96px;
@@ -194,12 +206,17 @@ div.gallery div.gallery-row {
 	-ms-column-gap: 7px;
 	column-gap: 7px;
 }
+*/
+dl.gallery-item {
+	float: left;	
+	margin: 0 1em;
+}
 
 
 /* Big image on gallery page */
 img.gallery-big-image {
 	/* Box model */
-	position: absolute;
+/*	position: absolute;
 	display: block;
 	right: 0;
 	top: 0;
@@ -208,11 +225,44 @@ img.gallery-big-image {
 	height: 378px;
 
 	margin-right: -69px;
+
+	/* Box model */
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 568px;
 }
 
+div.gallery-row {
+	max-width: 372px;	
+	position: relative;
+	margin: 0 auto;
+}
+
+/* Clearfix
+ */
+div.gallery + h2, div.gallery + h2 + p, div.gallery + h2 + ul {
+	clear: left;	
+}
 
 /* Responsive */
 
+/* When the big images on the equipment page
+ * are to small to cover the entire window
+ */
+@media screen and (min-width: 569px) {
+	img.gallery-big-image {
+		width: 568px;
+		display: block;
+	}	
+
+	body div.gallery {
+		margin: 1em auto;
+		padding: 0 2em;
+		text-align: center;
+	}
+	
+}
 
 /* Medium screens */
 @media screen and (min-width: 720px) {
@@ -220,8 +270,13 @@ img.gallery-big-image {
 	 * lines up side by side
 	 * */
 	header#logo {
-		margin: 0 0 90px 0;
+		margin: 0 0 90px 2em;
 		width: 40%;
+	}
+
+	header#logo h1 a span {
+		/* Box model */
+		margin-top: 0.5em;
 	}
 
 	/**
@@ -331,6 +386,14 @@ img.gallery-big-image {
 
 	}
 
+	dl.gallery-item {
+		margin: 0 0.5em;	
+	}
+
+	div.gallery-row {
+		max-width: 100%;	
+	}
+
 
 }
 
@@ -375,7 +438,7 @@ img.gallery-big-image {
 
 	nav[role="navigation"] {
 		/* Box model */
-		right: 100px;
+		right: 80px;
 
 		/* Colors and images */
 		background-size: auto;
