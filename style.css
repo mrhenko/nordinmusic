@@ -199,6 +199,98 @@ dl.gallery-item {
 	margin: 0 1em;
 }
 
+/* The resume page */
+article.post-8.page {
+	/* Box model */
+	/* The rounded corners are supposed to be 53 x 71 px */
+	border-radius: 53px;
+	height: 100%;
+	min-height: 700px;
+//	padding-top: 4.07em;
+
+	/* Colors and images */
+	background-color: rgba(255,255,255,0.5);
+}
+
+article.post-8.page ul {
+	/* Typography */
+	text-align: center;
+	margin: 3.79em;
+	padding: 3.79em 0;
+}
+
+
+article.post-8.page ul li {
+	/* Box model */
+	list-style: none;
+	display: inline-block;
+	margin: 1.07em 1em;
+	position: relative;
+
+	/* Typography */
+	font-size: 1em;
+	font-weight: 400;
+
+	/* Colors and images */
+	color: #7d281f;
+}
+
+/* Make the first 7 *really big* */
+article.post-8.page ul li:nth-of-type(1),
+article.post-8.page ul li:nth-of-type(2),
+article.post-8.page ul li:nth-of-type(3), 
+article.post-8.page ul li:nth-of-type(4), 
+article.post-8.page ul li:nth-of-type(5), 
+article.post-8.page ul li:nth-of-type(6), 
+article.post-8.page ul li:nth-of-type(7) {
+	/* Typography */
+	font-size: 1.79em;
+	font-weight: normal;
+} 
+
+/* Make the next 9 big */
+article.post-8.page ul li:nth-of-type(8),
+article.post-8.page ul li:nth-of-type(9),
+article.post-8.page ul li:nth-of-type(10), 
+article.post-8.page ul li:nth-of-type(11), 
+article.post-8.page ul li:nth-of-type(12), 
+article.post-8.page ul li:nth-of-type(13), 
+article.post-8.page ul li:nth-of-type(14),
+article.post-8.page ul li:nth-of-type(15),
+article.post-8.page ul li:nth-of-type(16) {
+	/* Typography */
+	font-size: 1.43em;
+	font-weight: 200;
+} 
+
+/* Add the trailing dot */
+article.post-8.page ul li:after {
+	/* Box model */
+	display: inline-block;
+	content: '.';
+	right: -1.2em;
+	position: absolute;
+}
+
+article.post-8.page ul li:last-of-type:after {
+	display: none;
+}
+
+/* Make new lines */
+article.post-8.page ul li:nth-of-type(8),
+article.post-8-page ul li:nth-of-type(17) {
+	clear: left;
+}
+
+/* And a leadin dot for the first on */
+/*article.post-8.page ul li:first-of-type:before {
+	/* Box model */
+/*	display: inline;
+	content: '.';
+}
+
+
+
 
 /* Big image on gallery page */
 img.gallery-big-image {
