@@ -200,7 +200,7 @@ dl.gallery-item {
 }
 
 /* The resume page */
-article.post-8.page {
+.clients article {
 	/* Box model */
 	/* The rounded corners are supposed to be 53 x 71 px */
 	border-radius: 53px;
@@ -212,7 +212,7 @@ article.post-8.page {
 	background-color: rgba(255,255,255,0.5);
 }
 
-article.post-8.page ul {
+.clients article ul {
 	/* Typography */
 	text-align: center;
 	margin: 3.79em;
@@ -220,7 +220,7 @@ article.post-8.page ul {
 }
 
 
-article.post-8.page ul li {
+.clients article ul li {
 	/* Box model */
 	list-style: none;
 	display: inline-block;
@@ -236,35 +236,35 @@ article.post-8.page ul li {
 }
 
 /* Make the first 7 *really big* */
-article.post-8.page ul li:nth-of-type(1),
-article.post-8.page ul li:nth-of-type(2),
-article.post-8.page ul li:nth-of-type(3), 
-article.post-8.page ul li:nth-of-type(4), 
-article.post-8.page ul li:nth-of-type(5), 
-article.post-8.page ul li:nth-of-type(6), 
-article.post-8.page ul li:nth-of-type(7) {
+.clients article ul li:nth-of-type(1),
+.clients article ul li:nth-of-type(2),
+.clients article ul li:nth-of-type(3), 
+.clients article ul li:nth-of-type(4), 
+.clients article ul li:nth-of-type(5), 
+.clients article ul li:nth-of-type(6), 
+.clients article ul li:nth-of-type(7) {
 	/* Typography */
 	font-size: 1.79em;
 	font-weight: normal;
 } 
 
 /* Make the next 9 big */
-article.post-8.page ul li:nth-of-type(8),
-article.post-8.page ul li:nth-of-type(9),
-article.post-8.page ul li:nth-of-type(10), 
-article.post-8.page ul li:nth-of-type(11), 
-article.post-8.page ul li:nth-of-type(12), 
-article.post-8.page ul li:nth-of-type(13), 
-article.post-8.page ul li:nth-of-type(14),
-article.post-8.page ul li:nth-of-type(15),
-article.post-8.page ul li:nth-of-type(16) {
+.clients article ul li:nth-of-type(8),
+.clients article ul li:nth-of-type(9),
+.clients article ul li:nth-of-type(10), 
+.clients article ul li:nth-of-type(11), 
+.clients article ul li:nth-of-type(12), 
+.clients article ul li:nth-of-type(13), 
+.clients article ul li:nth-of-type(14),
+.clients article ul li:nth-of-type(15),
+.clients article ul li:nth-of-type(16) {
 	/* Typography */
 	font-size: 1.43em;
 	font-weight: 200;
 } 
 
 /* Add the trailing dot */
-article.post-8.page ul li:after {
+.clients article ul li:after {
 	/* Box model */
 	display: inline-block;
 	content: '.';
@@ -272,18 +272,18 @@ article.post-8.page ul li:after {
 	position: absolute;
 }
 
-article.post-8.page ul li:last-of-type:after {
+.clients article ul li:last-of-type:after {
 	display: none;
 }
 
 /* Make new lines */
-article.post-8.page ul li:nth-of-type(8),
-article.post-8-page ul li:nth-of-type(17) {
+.clients article ul li:nth-of-type(8),
+.clients article ul li:nth-of-type(17) {
 	clear: left;
 }
 
 /* And a leadin dot for the first on */
-/*article.post-8.page ul li:first-of-type:before {
+/*.clients article ul li:first-of-type:before {
 	/* Box model */
 /*	display: inline;
 	content: '.';
