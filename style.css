@@ -199,46 +199,6 @@ dl.gallery-item {
 	margin: 0 1em;
 }
 
-/* The Equipment page */
-article.post-10.page {
-	/* Box model */
-	position: relative;
-	left: -1em;
-}
-
-article.post-10.page div {
-	/* Box model */
-	display: block;
-	float: left;
-	padding: 1em 1em;
-	margin: 0.5em 1em;
-	width: 15.3em;
-
-	/* Images & colors */
-	background-color: rgba(255, 255, 255, 0.5);
-}
-
-article.post-10.page div:nth-of-type(3n + 1) {
-	/* Box model */
-	clear: left;
-}
-
-article.post-10.page h2 {
-	/* Images & colors */
-	color: #761212;
-}
-
-article.post-10.page ul {
-	/* Box model */
-	padding: 0;
-}
-
-article.post-10.page ul li {
-	/* Box mdoel */
-	list-style: none;
-
-}
-
 /* The resume page */
 article.post-8.page {
 	/* Box model */
@@ -329,6 +289,51 @@ article.post-8-page ul li:nth-of-type(17) {
 	content: '.';
 }
 
+*/
+
+/* The equipment page */
+article.post-10.page h2 {
+	/* Images & colors */
+	color: #761212;
+}
+
+article.post-10.page ul li {
+	/* Box model */
+	list-style: none;
+}
+
+article.post-10.page div {
+	/* Box model */
+	margin: 1em auto;
+	padding: 0.5em 1em;
+}
+
+article.post-10.page h2 {
+	/* Box model */
+	margin-left: 0;
+}
+
+article.post-10.page div h2, article.post-10.page div ul {
+	/* Box model */
+	width: 100%;
+	max-width: 320px;
+	-webkit-box-sizing: border-box;
+	padding: 1em;
+	margin: 0 auto;
+	position: relative;
+
+	/* Images & colors */
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+article.post-10.page div h2 {
+	padding: 0.8em;
+	padding-bottom: 0;
+}
+
+article.post-10.page div ul {
+	padding-top: 0;
+}
 
 
 
@@ -366,6 +371,21 @@ div.gallery + h2, div.gallery + h2 + p, div.gallery + h2 + ul {
 
 /* Responsive */
 
+@media screen and (min-width: 500px) {
+
+	/* The equipment page */
+	article.post-10.page div {
+		/* Box model */
+		width: 50%;
+		max-width: auto;
+		float: left;
+		-webkit-box-sizing: border-box;
+	}
+
+
+}
+
+
 /* When the big images on the equipment page
  * are to small to cover the entire window
  */
@@ -380,6 +400,7 @@ div.gallery + h2, div.gallery + h2 + p, div.gallery + h2 + ul {
 		padding: 0 2em;
 		text-align: center;
 	}
+
 	
 }
 
@@ -513,8 +534,14 @@ div.gallery + h2, div.gallery + h2 + p, div.gallery + h2 + ul {
 		max-width: 660px;	
 	}
 
-
+	/* The Equipment page */
+	article.post-10.page div {
+		/* Box model */
+		width: 33%;
+	}
+	
 }
+
 
 /* "Full size" screens */
 @media screen and (min-width: 1024px) {
@@ -613,6 +640,6 @@ div.gallery + h2, div.gallery + h2 + p, div.gallery + h2 + ul {
 
 	dl.gallery-item {
 		margin: 0.5em 1em;	
-	}
+	}	
 		
 }
