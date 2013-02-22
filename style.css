@@ -199,6 +199,46 @@ dl.gallery-item {
 	margin: 0 1em;
 }
 
+/* The Equipment page */
+article.post-10.page {
+	/* Box model */
+	position: relative;
+	left: -1em;
+}
+
+article.post-10.page div {
+	/* Box model */
+	display: block;
+	float: left;
+	padding: 1em 1em;
+	margin: 0.5em 1em;
+	width: 15.3em;
+
+	/* Images & colors */
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+article.post-10.page div:nth-of-type(3n + 1) {
+	/* Box model */
+	clear: left;
+}
+
+article.post-10.page h2 {
+	/* Images & colors */
+	color: #761212;
+}
+
+article.post-10.page ul {
+	/* Box model */
+	padding: 0;
+}
+
+article.post-10.page ul li {
+	/* Box mdoel */
+	list-style: none;
+
+}
+
 /* The resume page */
 article.post-8.page {
 	/* Box model */
