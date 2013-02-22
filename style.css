@@ -292,28 +292,28 @@ article.post-8-page ul li:nth-of-type(17) {
 */
 
 /* The equipment page */
-article.post-10.page h2 {
+.equipment article h2 {
 	/* Images & colors */
 	color: #761212;
 }
 
-article.post-10.page ul li {
+.equipment article ul li {
 	/* Box model */
 	list-style: none;
 }
 
-article.post-10.page div {
+.equipment article div {
 	/* Box model */
 	margin: 1em auto;
 	padding: 0.5em 1em;
 }
 
-article.post-10.page h2 {
+.equipment article h2 {
 	/* Box model */
 	margin-left: 0;
 }
 
-article.post-10.page div h2, article.post-10.page div ul {
+.equipment article div h2, .equipment article div ul {
 	/* Box model */
 	width: 100%;
 	max-width: 320px;
@@ -326,12 +326,12 @@ article.post-10.page div h2, article.post-10.page div ul {
 	background-color: rgba(255, 255, 255, 0.5);
 }
 
-article.post-10.page div h2 {
+.equipment article div h2 {
 	padding: 0.8em;
 	padding-bottom: 0;
 }
 
-article.post-10.page div ul {
+.equipment article div ul {
 	padding-top: 0;
 }
 
@@ -374,7 +374,7 @@ div.gallery + h2, div.gallery + h2 + p, div.gallery + h2 + ul {
 @media screen and (min-width: 500px) {
 
 	/* The equipment page */
-	article.post-10.page div {
+	.equipment article div {
 		/* Box model */
 		width: 50%;
 		max-width: auto;
@@ -535,7 +535,7 @@ div.gallery + h2, div.gallery + h2 + p, div.gallery + h2 + ul {
 	}
 
 	/* The Equipment page */
-	article.post-10.page div {
+	.equipment article div {
 		/* Box model */
 		width: 33%;
 	}
