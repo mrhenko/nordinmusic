@@ -376,16 +376,39 @@ div.gallery + h2, div.gallery + h2 + p, div.gallery + h2 + ul {
 
 @media screen and (min-width: 500px) {
 
-	/* The equipment page */
+	/* The equipment page, two columns. */
+	/* New, better, way using css columns */
+	.equipment article {
+		/* Box model */
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		-o-column-count: 2;
+		column-count: 2;
+		padding: 0 1em;
+	}
+
 	.equipment article div {
+		/* Box model */
+		display: inline-block;
+		width: 100%;
+		margin: 0.25em 0;
+		padding: 0.5em 0;
+	}
+
+	/* Old, dumb way */
+	.no-csscolumns .equipment article div {
 		/* Box model */
 		width: 50%;
 		max-width: auto;
 		float: left;
+		display: block;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		-o-box-sizing: border-box;
 		box-sizing: border-box;
+
+		margin: 1em auto;
+		padding: 0.5em 1em;
 
 	}
 
@@ -542,7 +565,17 @@ div.gallery + h2, div.gallery + h2 + p, div.gallery + h2 + ul {
 	}
 
 	/* The Equipment page */
-	.equipment article div {
+	/* New, better, way using css columns */
+	.equipment article {
+		/* Box model */
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		-o-column-count: 3;
+		column-count: 3;
+	}
+
+	/* Old, dumb way */
+	.no-csscolumns .equipment article div {
 		/* Box model */
 		width: 33%;
 	}
