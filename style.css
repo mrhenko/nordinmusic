@@ -338,6 +338,29 @@ dl.gallery-item {
 	padding-top: 0;
 }
 
+/* The Contact page */
+.contact article {
+	/* Typography */
+	text-align: center;
+	font-size: 1.17em;
+}
+
+.contact article ul li {
+	/* Box model */
+	list-style: none;
+}
+
+.contact article li.fn {
+	/* Typography */
+	font-size: 1.5em;
+}
+
+.contact article a {
+	/* Text */
+	text-decoration: none;
+	color: #000;
+}
+
 
 
 /* Big image on gallery page */
@@ -579,6 +602,33 @@ div.gallery + h2, div.gallery + h2 + p, div.gallery + h2 + ul {
 		/* Box model */
 		width: 33%;
 	}
+
+
+	/* The Contact page */
+	.contact article ul {
+		/* Box model */
+		padding-top: 7em;
+		position: relative;
+		left: -8em;
+		z-index: 10;
+	}
+
+	/* Insert the image of the speaker */
+	.contact article:after {
+		/* Box model */
+		display: block;
+		content: ' ';
+		width: 440px;
+		height: 329px;
+		opacity: 0.5;
+		position: absolute;
+		left: 50%;
+		margin: -13em 0 0 -220px;
+		z-index: -10;
+
+		/* Images & colors */
+		background-image: url('pix/speaker.png');
+	}
 	
 }
 
@@ -602,7 +652,7 @@ div.gallery + h2, div.gallery + h2 + p, div.gallery + h2 + ul {
 	}
 
 	/* The face */
-	body.main-page article.main-content:before {
+	body.main-page article.main-content:before, body.contact article:before {
 		content: ' ';
 
 		/* Box model */
@@ -681,5 +731,17 @@ div.gallery + h2, div.gallery + h2 + p, div.gallery + h2 + ul {
 	dl.gallery-item {
 		margin: 0.5em 1em;	
 	}	
+
+	/* The Contact page */
+	.contact article ul {
+		/* Box model */
+		padding-top: 8em;
+		left: -2.5em;
+	}
+
+	.contact article:after {
+		/* Box model */
+		margin: -13em 0 0 -140px;
+	}
 		
 }
