@@ -318,6 +318,9 @@ dl.gallery-item {
 	width: 100%;
 	max-width: 320px;
 	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
 	padding: 1em;
 	margin: 0 auto;
 	position: relative;
@@ -380,6 +383,10 @@ div.gallery + h2, div.gallery + h2 + p, div.gallery + h2 + ul {
 		max-width: auto;
 		float: left;
 		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		box-sizing: border-box;
+
 	}
 
 
