@@ -457,6 +457,7 @@ div.gallery + h2, div.gallery + h2 + p, div.gallery + h2 + ul {
 	header#logo {
 		margin: 0 0 90px 2em;
 		width: 40%;
+		height: 160px;
 	}
 
 	header#logo h1 a span {
