@@ -45,6 +45,8 @@
 
 		<script src="<?php bloginfo('template_directory') ?>/gallery_images.js">
 		</script>
+		<script src="<?php bloginfo('template_directory') ?>/splashscreen.js">
+		</script>
 		<?php wp_footer(); ?>
 	</body>
 
