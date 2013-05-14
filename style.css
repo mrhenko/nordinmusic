@@ -133,6 +133,11 @@ header#logo {
 }
 
 header#logo h1 a {
+	/* Box model */
+	display: block;
+	max-height: 110px;
+	overflow: hidden;
+
 	/* Typography */
 	font-size: 2em;
 	line-height: 1.5em;
@@ -144,7 +149,7 @@ header#logo h1 a {
 	color: #8a1e16;
 
 	/* Make invisible, but clickable */
-	opacity: 0;
+	opacity: 0.5;
 }
 
 header#logo h1 a span {
