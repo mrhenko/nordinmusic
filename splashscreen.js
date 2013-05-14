@@ -12,8 +12,9 @@
 		newtagline = newtagline + '</p>';
 		tagline.innerHTML = newtagline;
 
+		$('#tagline').height($(document).height());
 		$('#tagline').addClass('active');
-		$('#tagline').delay('8000').queue(function(next) {
+		$('#tagline').delay(8000).fadeOut(2000).delay(4000).queue(function(next) {
 			$(this).removeClass('active');
 			next();	
 		});
