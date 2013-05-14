@@ -10,6 +10,10 @@
 		}
 	?>>
 
+	<aside id="tagline">
+		<p><?php bloginfo('description'); ?></p>
+	</aside>
+
 		<header id="logo" role="banner">
 			<h1><a href="<?php bloginfo('url'); ?>">
 				<span>Nordin</span> Music Productions
