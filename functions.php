@@ -141,4 +141,79 @@
 		return array($explodedPartOne, $explodedPartTwo);
 	}
 
+
+	/* --------------------------------------------------
+	 * --------------------------------------------------
+	 * -------------------------------------------------- */
+
+	/* Custom Post Types */
+	function nm_loadReferenser() {
+		register_post_type('nm_referenser',
+			array (
+					'labels' => array(
+					'name' > __('Referenser'),
+					'singular_name' => __('Referens'),
+					'add_new' => __('Lägg till referens'),
+					'menu_name' => __('Referenser'),
+					'edit_item' => __('Redigera referens'),
+					'view_item' => __('Visa referens'),
+					'not_found' => __('Inga referenser kunde hittas.')
+					),
+				'public' => true,
+				'rewrite' => array('slug' => 'referenser'),
+				'menu_position' => __(20),
+				'supports' => array('title')
+			)
+		);
+	}
+
+	function nm_addMetaBoxes() {
+		add_meta_box('nm_referensranking', 'Prominens', 'nm_displayMetaFields', 'nm_referenser');
+	}
+
+	function nm_displayMetaFields() {
+		global $post;
+
+		$prominens = get_post_meta($post->ID, '_nm_custom_fields_prominens', true);
+
+		echo '<div>
+				<label for="ranging">Prominens</label>
+				<select name="prominens">
+					<option value="1"';
+					
+					if ($prominens == '1') echo ' selected ';
+		
+		echo '		>1 (Viktigast)</option>
+					<option value="2"';
+					
+					if ($prominens == '2') echo ' selected ';
+					
+		echo '		>2</option>
+					<option value="3"';
+					
+					if ($prominens == '3') echo ' selected ';
+					
+		echo '		>3 (minst viktig)</option>
+				</select>
+			</div>';
+
+	
+	}
+
+	function nm_saveCustomFields() {
+		if (isset($_POST['prominens'])) {
+			update_post_meta($_POST['post_ID'], '_nm_custom_fields_prominens', $_POST['prominens']);
+		}
+	}
+
+	add_action('save_post', 'nm_saveCustomFields');
+
+	function nm_loadCustomPostTypes() { #nm is the "namespace" nordinmusic
+		nm_loadReferenser();	
+	}
+
+	add_action('init', 'nm_loadCustomPostTypes');
+	add_action('add_meta_boxes', 'nm_addMetaBoxes');
+
+
 ?>

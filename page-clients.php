@@ -27,18 +27,26 @@
 			?>
 		</nav><!-- The main navigation -->
 
-		<?php if ( have_posts() ) :?>
-			<?php while (have_posts() ) :?>
-				<?php the_post(); ?>
-				<article <?php post_class('main-content'); ?>>
-					<?php
-						the_content();
-						//print_r(mrh_process_image_tags(get_the_content()));
-					?>
-				</article>
-			<?php endwhile; ?>
-		<?php endif; ?>
+		<article <?php post_class('main-content'); ?>>
+			<ul>
 
+				<?php
+					$wp_query = new WP_Query(array(
+						'post_type' => 'nm_referenser',
+						'posts_per_page' => 100,
+						'meta_key' => '_nm_custom_fields_prominens',
+						'orderby' => 'meta_value',
+						'order' => 'ASC'
+					));
+
+					while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+						<?php $prominens = "prominens" . get_post_meta($post->ID, '_nm_custom_fields_prominens', true); ?>
+						<li class="<?php echo $prominens; ?>"><?php the_title(); ?></li>
+					<?php endwhile; ?>
+
+			</ul>
+		</article>
+			
 		<script src="<?php bloginfo('template_directory') ?>/gallery_images.js">
 		</script>
 		<?php wp_footer(); ?>

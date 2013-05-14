@@ -235,29 +235,15 @@ dl.gallery-item {
 	color: #7d281f;
 }
 
-/* Make the first 7 *really big* */
-.clients article ul li:nth-of-type(1),
-.clients article ul li:nth-of-type(2),
-.clients article ul li:nth-of-type(3), 
-.clients article ul li:nth-of-type(4), 
-.clients article ul li:nth-of-type(5), 
-.clients article ul li:nth-of-type(6), 
-.clients article ul li:nth-of-type(7) {
+/* Really important client */
+.clients article ul li.prominens1 {
 	/* Typography */
 	font-size: 1.79em;
 	font-weight: normal;
 } 
 
-/* Make the next 9 big */
-.clients article ul li:nth-of-type(8),
-.clients article ul li:nth-of-type(9),
-.clients article ul li:nth-of-type(10), 
-.clients article ul li:nth-of-type(11), 
-.clients article ul li:nth-of-type(12), 
-.clients article ul li:nth-of-type(13), 
-.clients article ul li:nth-of-type(14),
-.clients article ul li:nth-of-type(15),
-.clients article ul li:nth-of-type(16) {
+/* Medium clients */
+.clients article ul li.prominens2 {
 	/* Typography */
 	font-size: 1.43em;
 	font-weight: 200;
@@ -277,10 +263,11 @@ dl.gallery-item {
 }
 
 /* Make new lines */
-.clients article ul li:nth-of-type(8),
+/*.clients article ul li:nth-of-type(8),
 .clients article ul li:nth-of-type(17) {
 	clear: left;
-}
+}*/
+
 
 /* And a leadin dot for the first on */
 /*.clients article ul li:first-of-type:before {
