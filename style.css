@@ -149,7 +149,7 @@ header#logo h1 a {
 	color: #8a1e16;
 
 	/* Make invisible, but clickable */
-	opacity: 0.5;
+	opacity: 0;
 }
 
 header#logo h1 a span {
