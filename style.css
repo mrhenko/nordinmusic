@@ -71,7 +71,8 @@ body {
 	line-height: 1.5em;
 	
 	/* Colors and images */
-	background-color: #e1dcc1;
+/*	background-color: #e1dcc1;*/
+	background-color: #e4dbc3;
 	background-image: url('pix/background.png');
 	background-position: 50% 0;
 	background-repeat: no-repeat;
