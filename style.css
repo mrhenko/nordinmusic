@@ -180,6 +180,19 @@ nav[role="navigation"] ul {
 	background-repeat: no-repeat;
 }
 
+
+/**
+ *
+ * A "retina" face
+ *
+ **/
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+	nav[role="navigation"] ul {
+		background-image: url('pix/mediumface.png');
+		background-size: auto 118px;
+	}
+}
+
 nav[role="navigation"] ul li {
 	/* Box model */
 	width: 165px;
