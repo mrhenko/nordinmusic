@@ -843,20 +843,20 @@ div.gallery + h2, div.gallery + h2 + p, div.gallery + h2 + ul {
 }
 
 #tagline.active span:nth-of-type(1) {
-	-webkit-animation: FADE-IN-SPLASH-1 1.5s;
+	-webkit-animation: FADE-IN-SPLASH-1 1s;
 
 	-webkit-transform: translateX(-100px) rotate(-20deg);
 }
 #tagline.active span:nth-of-type(2) {
-	-webkit-animation: FADE-IN-SPLASH-2 3s;
+	-webkit-animation: FADE-IN-SPLASH-2 2s;
 }
 #tagline.active span:nth-of-type(3) {
-	-webkit-animation: FADE-IN-SPLASH-3 4.5s;
+	-webkit-animation: FADE-IN-SPLASH-3 3s;
 
 	-webkit-transform: translateX(-60px);
 }
 #tagline.active span:nth-of-type(4) {
-	-webkit-animation: FADE-IN-SPLASH-4 6s;
+	-webkit-animation: FADE-IN-SPLASH-4 4s;
 
 	font-size: 6em;
 }
