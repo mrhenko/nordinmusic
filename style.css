@@ -168,6 +168,11 @@ header#logo h1 a span {
 	opacity: 0;
 }
 
+nav[role="navigation"] {
+	/* Box model */
+	margin-bottom: 2.5em;
+}
+
 nav[role="navigation"] ul {
 	/* Box model */
 	position: relative;
