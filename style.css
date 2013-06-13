@@ -168,6 +168,60 @@ header#logo h1 a span {
 	opacity: 0;
 }
 
+nav[role="navigation"] ul {
+	/* Box model */
+	position: relative;
+	display: block;
+	width: 204px;
+	padding-left: 100px;
+	margin: 0 auto;
+
+	background-image: url('pix/smallface.png');
+	background-repeat: no-repeat;
+}
+
+nav[role="navigation"] ul li {
+	/* Box model */
+	width: 165px;
+	margin: 1em 0;
+
+	/* Typography */
+	list-style: none;
+	text-align: center;
+
+	/* Colors and images */
+	background-image: url('pix/tejp.png');
+	background-repeat: no-repeat;
+}
+
+
+nav[role="navigation"] ul li a {
+	/* Box model */
+	display: block;
+	height: 30px;
+
+	opacity: 0;
+}
+
+/* First */
+nav[role="navigation"] ul li:nth-of-type(1) {
+	/* Colors and images */
+	background-position: -20px -10px;
+}
+
+/* Place the second link in the middle */
+nav[role="navigation"] ul li:nth-of-type(2) {
+	/* Colors and images */
+	background-position: -20px -55px;
+}
+
+/* The third */
+nav[role="navigation"] ul li:nth-of-type(3) {
+	background-position: -15px -100px;
+}
+
+
+
 /* The Nav menu */
 nav[role="navigation"] ul li a {
 	/* Typography */
@@ -500,36 +554,22 @@ div.gallery + h2, div.gallery + h2 + p, div.gallery + h2 + ul {
 		position: absolute;
 		bottom: -20px;
 		width: 100%;
+		padding-left: 2em;
+		margin: 0;
+
+		background-image: none;
 	}
 
 	nav[role="navigation"] ul li {
 		/* Box model */
-		//padding-left: 30px;
-		width: 165px;
-
-		/* Typography */
-		list-style: none;
-		text-align: center;
-
-		/* Colors and images */
-		background-image: url('pix/tejp.png');
-		background-repeat: no-repeat;
+		margin: 0;
 	}
-
-	nav[role="navigation"] ul li a {
-		/* Box model */
-		display: block;
-
-		opacity: 0;
-	}
+	
 
 	/* First */
 	nav[role="navigation"] ul li:nth-of-type(1) {
 		/* Box model */
 		margin-left: -80px;
-
-		/* Colors and images */
-		background-position: -20px -10px;
 
 		/* Special */
 		-webkit-transform: rotate(1deg);
@@ -548,9 +588,6 @@ div.gallery + h2, div.gallery + h2 + p, div.gallery + h2 + ul {
 		margin: 0 auto;
 		text-align: center;	
 
-		/* Colors and images */
-		background-position: -20px -50px;
-
 		/* Special */
 		-webkit-transform: rotate(-5deg);
 		-moz-transform: rotate(-5deg);
@@ -566,9 +603,6 @@ div.gallery + h2, div.gallery + h2 + p, div.gallery + h2 + ul {
 		bottom: 4.42em;
 		right: -20px;
 		//width: 165px;
-
-		/* Colors and images */
-		background-position: -15px -100px;
 
 		/* Special */
 		-webkit-transform: rotate(8deg);
